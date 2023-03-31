@@ -28,7 +28,7 @@ namespace MyLib {
 
             Matrix(Matrix&& other);
 
-            Matrix(size_t rows, size_t cols, const T& val = 0);
+            Matrix(size_t rows, size_t cols, const T& val = T(NULL));
 
             std::pair<size_t, size_t> get_size() const; 
 

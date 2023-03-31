@@ -33,7 +33,7 @@ namespace MyLib {
 
             Array();
 
-            Array(size_t n, const T& val = 0);
+            Array(size_t n, const T& val = T(NULL));
 
             Array(const Array<T>& other);
 

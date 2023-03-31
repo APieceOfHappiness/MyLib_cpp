@@ -55,11 +55,17 @@ namespace MyLib {
 
         template<class T>
         MyArray::Array<T>& Matrix<T>::operator[](size_t idx) {
+            if (idx >= this->rows) {
+                throw std::runtime_error("index out of range");
+            }
             return (*this->arr)[idx];
         }
 
         template<class T>
         const MyArray::Array<T>& Matrix<T>::operator[](size_t idx) const {
+            if (idx >= this->rows) {
+                throw std::runtime_error("index out of range");
+            }
             return (*this->arr)[idx];
         }
 

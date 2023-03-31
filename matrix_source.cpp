@@ -101,5 +101,12 @@ int main () {
     std::cout << "src(after moving): " << src << std::endl;
     std::cout << "dest(after moving): " << dest << std::endl;
 
+
+    MyLib::MyMatrix::Matrix<int> one;
+    MyLib::MyMatrix::Matrix<int> two;
+    one[0][0] = 1;
+    two[0][0] = 2;
+    std::cout << "last check: " << one + two << std::endl;
+
     return 0;
 }

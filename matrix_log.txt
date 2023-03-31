@@ -208,3 +208,7 @@ dest(after moving): Matrix 5x3 {
 	1 1 1 
 } 
 
+last check: Matrix 1x1 {
+	3 
+} 
+
