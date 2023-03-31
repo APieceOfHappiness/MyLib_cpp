@@ -1,0 +1,210 @@
+-------------- Log: ------------
+mat_0arg:	
+Matrix 1x1 {
+	0 
+} 
+
+mat_2arg:	
+Matrix 5x3 {
+	0 0 0 
+	0 0 0 
+	0 0 0 
+	0 0 0 
+	0 0 0 
+} 
+
+mat_copy:	
+Matrix 5x3 {
+	0 0 0 
+	0 0 0 
+	0 0 0 
+	0 0 0 
+	0 0 0 
+} 
+
+mat_3arg:	
+Matrix 5x3 {
+	3 3 3 
+	3 3 3 
+	3 3 3 
+	3 3 3 
+	3 3 3 
+} 
+
+mat_3arg_other:	
+Matrix 5x3 {
+	-2 -2 -2 
+	-2 -2 -2 
+	-2 -2 -2 
+	-2 -2 -2 
+	-2 -2 -2 
+} 
+
+mat_empty:	
+Matrix 0x0 {
+} 
+
+
+-------------- is empty: ------------
+mat_0arg:	0
+mat_2arg:	0
+mat_3arg:	0
+mat_empty:	1
+
+-------------- get_size: ------------
+mat_0arg:	1x1
+mat_2arg:	5x3
+mat_3arg:	5x3
+mat_empty:	0x0
+
+-------------- operator+: ------------
+mat_2arg + mat_3arg:	
+Matrix 5x3 {
+	3 3 3 
+	3 3 3 
+	3 3 3 
+	3 3 3 
+	3 3 3 
+} 
+
+mat_3arg + mat_3arg_other:	
+Matrix 5x3 {
+	1 1 1 
+	1 1 1 
+	1 1 1 
+	1 1 1 
+	1 1 1 
+} 
+
+mat_empty + mat_empty:	
+Matrix 0x0 {
+} 
+
+
+-------------- operator-: ------------
+mat_2arg - mat_3arg:	
+Matrix 5x3 {
+	-3 -3 -3 
+	-3 -3 -3 
+	-3 -3 -3 
+	-3 -3 -3 
+	-3 -3 -3 
+} 
+
+mat_3arg - mat_3arg_other:	
+Matrix 5x3 {
+	5 5 5 
+	5 5 5 
+	5 5 5 
+	5 5 5 
+	5 5 5 
+} 
+
+mat_empty - mat_empty:	
+Matrix 0x0 {
+} 
+
+
+-------------- operator+=: ------------
+mat_2arg += (mat_3arg + mat_3arg_other):	
+Matrix 5x3 {
+	1 1 1 
+	1 1 1 
+	1 1 1 
+	1 1 1 
+	1 1 1 
+} 
+
+mat_2arg += mat_2arg:	
+Matrix 5x3 {
+	2 2 2 
+	2 2 2 
+	2 2 2 
+	2 2 2 
+	2 2 2 
+} 
+
+mat_empty += mat_empty:	
+Matrix 0x0 {
+} 
+
+
+-------------- operator-=: ------------
+mat_2arg -= (mat_3arg + mat_3arg_other):	
+Matrix 5x3 {
+	1 1 1 
+	1 1 1 
+	1 1 1 
+	1 1 1 
+	1 1 1 
+} 
+
+mat_2arg -= mat_2arg:	
+Matrix 5x3 {
+	0 0 0 
+	0 0 0 
+	0 0 0 
+	0 0 0 
+	0 0 0 
+} 
+
+mat_empty -= mat_empty:	
+Matrix 0x0 {
+} 
+
+
+-------------- operator==: ------------
+mat_2arg == mat_copy:	1
+mat_2arg == mat_2arg:	1
+mat_2arg == mat_3arg:	0
+mat_empty == mat_empty:	1
+
+-------------- operator!=: ------------
+mat_2arg != mat_copy:	0
+mat_2arg != mat_2arg:	0
+mat_2arg != mat_3arg:	1
+mat_empty != mat_empty:	0
+
+-------------- operator[]: ------------
+mat_idx:	
+Matrix 5x3 {
+	0 1 2 
+	3 4 5 
+	6 7 8 
+	9 10 11 
+	12 13 14 
+} 
+
+mat_idx[2]:	6 7 8 
+mat_idx[0]:	0 1 2 
+mat_idx[0][1] += 1:	2
+mat_idx:	
+Matrix 5x3 {
+	0 2 2 
+	3 4 5 
+	6 7 8 
+	9 10 11 
+	12 13 14 
+} 
+
+
+-------------- move: ------------
+src: Matrix 5x3 {
+	1 1 1 
+	1 1 1 
+	1 1 1 
+	1 1 1 
+	1 1 1 
+} 
+
+src(after moving): Matrix 0x0 {
+} 
+
+dest(after moving): Matrix 5x3 {
+	1 1 1 
+	1 1 1 
+	1 1 1 
+	1 1 1 
+	1 1 1 
+} 
+

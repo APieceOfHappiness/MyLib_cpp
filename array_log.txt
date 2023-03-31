@@ -1,0 +1,63 @@
+-------------- Log: ------------
+arr_0arg:	0 
+arr_1arg:	0 0 0 0 0 
+arr_copy:	0 0 0 0 0 
+arr_2arg:	3 3 3 3 3 
+arr_2arg_other:	-2 -2 -2 -2 -2 
+arr_empty:	
+
+-------------- is empty: ------------
+arr_0arg:	0
+arr_1arg:	0
+arr_2arg:	0
+arr_empty:	1
+
+-------------- get_size: ------------
+arr_0arg:	1
+arr_1arg:	5
+arr_2arg:	5
+arr_empty:	0
+
+-------------- operator+: ------------
+arr_1arg + arr_2arg:	3 3 3 3 3 
+arr_2arg + arr_2arg_other:	1 1 1 1 1 
+arr_empty + arr_empty:	
+
+-------------- operator-: ------------
+arr_1arg - arr_2arg:	-3 -3 -3 -3 -3 
+arr_2arg - arr_2arg_other:	5 5 5 5 5 
+arr_empty - arr_empty:	
+
+-------------- operator+=: ------------
+arr_1arg += (arr_2arg + arr_2arg_other):	1 1 1 1 1 
+arr_1arg += arr_1arg:	2 2 2 2 2 
+arr_empty += arr_empty:	
+
+-------------- operator-=: ------------
+arr_1arg -= (arr_2arg + arr_2arg_other):	1 1 1 1 1 
+arr_1arg -= arr_1arg:	0 0 0 0 0 
+arr_empty -= arr_empty:	
+
+-------------- operator==: ------------
+arr_1arg == arr_copy:	1
+arr_1arg == arr_1arg:	1
+arr_1arg == arr_2arg:	0
+arr_empty == arr_empty:	1
+
+-------------- operator!=: ------------
+arr_1arg != arr_copy:	0
+arr_1arg != arr_1arg:	0
+arr_1arg != arr_2arg:	1
+arr_empty != arr_empty:	0
+
+-------------- operator[]: ------------
+arr_idx:	0 1 2 3 4 
+arr_idx[2]:	2
+arr_idx[0]:	0
+arr_idx[0]++:	0
+arr_idx:	1 1 2 3 4 
+
+-------------- move: ------------
+src: 0 0 0 0 0 
+src(after moving): 
+dest(after moving): 0 0 0 0 0 
